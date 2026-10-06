@@ -1,0 +1,17 @@
+[
+  {
+    "modid": "mod_menu",
+    "name": "Legacy Mod Menu",
+    "description": "Adds a mod menu to view the list of installed mods.\n\nThis mod is a fork of Better Modlist (https://modrinth.com/mod/better-modlist), which is a fork of Mod Menu (https://modrinth.com/mod/modmenu).\n\nAuthor of Legacy Mod Menu: azuban\nAuthor of Better Modlist: 1foxy2\nAuthor of Mod Menu: Prospector, TerraformersMC",
+    "version": "${version}",
+    "mcversion": "${mcversion}",
+    "url": "https://github.com/azubangithub/legacy-mod-menu",
+    "issues": "https://github.com/azubangithub/legacy-mod-menu/issues",
+    "updateUrl": "",
+    "authorList": ["azuban", "1foxy2", "Prospector", "TerraformersMC"],
+    "credits": "Author of Legacy Mod Menu: azuban\nAuthor of Better Modlist: 1foxy2\nAuthor of Mod Menu: Prospector, TerraformersMC",
+    "logoFile": "icon.png",
+    "screenshots": [],
+    "dependencies": []
+  }
+]

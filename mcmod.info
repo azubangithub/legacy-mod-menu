@@ -1,0 +1,16 @@
+[
+  {
+    "modid": "mod_menu",
+    "name": "Mod Menu",
+    "description": "Adds a mod menu to view the list of installed mods.",
+    "version": "1.0.0",
+    "mcversion": "1.12.2",
+    "url": "https://github.com/1foxy2/neo_mod_menu",
+    "updateUrl": "",
+    "authorList": ["Prospector", "haykam821", "TerraformersMC", "foxy", "azuban"],
+    "credits": "Original mod by TerraformersMC. Ported to 1.12.2 Forge by azuban.",
+    "logoFile": "icon.png",
+    "screenshots": [],
+    "dependencies": []
+  }
+]

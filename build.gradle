@@ -1,0 +1,87 @@
+plugins {
+    id 'java'
+    id 'com.gtnewhorizons.retrofuturagradle' version '2.0.4'
+}
+
+version = "${mc_version}-${mod_version}"
+group = project.maven_group
+base {
+    archivesName = project.archives_base_name
+}
+
+java {
+    toolchain {
+        languageVersion.set(JavaLanguageVersion.of(8))
+    }
+}
+
+sourceSets {
+    main {
+        java {
+            srcDirs = ['src/main/java']
+        }
+        resources {
+            srcDirs = ['src/main/resources']
+        }
+    }
+}
+
+minecraft {
+    mcVersion = project.mc_version
+    mcpMappingChannel = project.mcp_mappings_channel
+    mcpMappingVersion = project.mcp_mappings_version
+    username = 'Developer'
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    // 1.12.2 Forge provides Guava, Gson, and standard Minecraft libraries
+}
+
+processResources {
+    inputs.property "version", project.version
+    inputs.property "mcversion", project.mc_version
+
+    filesMatching('mcmod.info') {
+        expand 'version': project.mod_version, 'mcversion': project.mc_version
+    }
+
+    doLast {
+        copy {
+            from "${buildDir}/resources/main"
+            into "${buildDir}/classes/java/main"
+        }
+    }
+}
+
+classes.dependsOn processResources
+
+// Minecraft 1.12.2 must be launched with Java 8.
+// Gradle itself runs on JDK 17+, but the game process needs JDK 8.
+afterEvaluate {
+    tasks.withType(JavaExec).configureEach { task ->
+        if (task.name.contains('runClient') || task.name.contains('runServer')) {
+            task.javaLauncher.set(javaToolchains.launcherFor {
+                languageVersion = JavaLanguageVersion.of(8)
+                vendor = JvmVendorSpec.ADOPTIUM
+            })
+        }
+    }
+}
+
+jar {
+    duplicatesStrategy = DuplicatesStrategy.EXCLUDE
+    manifest {
+        attributes([
+            "Specification-Title": project.mod_id,
+            "Specification-Vendor": project.mod_authors,
+            "Specification-Version": "1",
+            "Implementation-Title": project.archives_base_name,
+            "Implementation-Version": project.version,
+            "Implementation-Vendor": project.mod_authors
+        ])
+    }
+}
