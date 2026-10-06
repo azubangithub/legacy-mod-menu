@@ -13,6 +13,9 @@ out
 *.iml
 .idea
 
+# vscode
+.vscode/
+
 # gradle
 build
 .gradle
@@ -24,3 +27,9 @@ runs
 run-data
 
 repo
+
+# ignored files
+ModMenuLegacyIcon.png
+modmenulegacyicon.png
+LICENSE.txt
+license.txt

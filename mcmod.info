@@ -1,14 +1,15 @@
 [
   {
     "modid": "mod_menu",
-    "name": "Mod Menu",
-    "description": "Adds a mod menu to view the list of installed mods.",
+    "name": "Legacy Mod Menu",
+    "description": "Adds a mod menu to view the list of installed mods.\n\nThis mod is a fork of Better Modlist (https://modrinth.com/mod/better-modlist), which is a fork of Mod Menu (https://modrinth.com/mod/modmenu).\n\nAuthor of Legacy Mod Menu: azuban\nAuthor of Better Modlist: 1foxy2\nAuthor of Mod Menu: Prospector, TerraformersMC",
     "version": "1.0.0",
     "mcversion": "1.12.2",
-    "url": "https://github.com/1foxy2/neo_mod_menu",
+    "url": "https://github.com/azubangithub/legacy-mod-menu",
+    "issues": "https://github.com/azubangithub/legacy-mod-menu/issues",
     "updateUrl": "",
-    "authorList": ["Prospector", "haykam821", "TerraformersMC", "foxy", "azuban"],
-    "credits": "Original mod by TerraformersMC. Ported to 1.12.2 Forge by azuban.",
+    "authorList": ["azuban", "1foxy2", "Prospector", "TerraformersMC"],
+    "credits": "Author of Legacy Mod Menu: azuban\nAuthor of Better Modlist: 1foxy2\nAuthor of Mod Menu: Prospector, TerraformersMC",
     "logoFile": "icon.png",
     "screenshots": [],
     "dependencies": []
